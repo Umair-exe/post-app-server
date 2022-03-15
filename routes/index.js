@@ -14,7 +14,7 @@ router.post('/registerUser', async (req,res) => {
         if(checkUser) { 
             console.log("exist");
             return res.json({
-                 msg:"user already exist",
+                 msg:"Account already exist",
             }); 
         }
         let user = new User();
@@ -28,7 +28,7 @@ router.post('/registerUser', async (req,res) => {
         //const newUser = await User.create(user);
 
         return res.json({
-            msg: "User created",
+            msg: "Account created",
             data: user.name
         })
         
@@ -36,7 +36,7 @@ router.post('/registerUser', async (req,res) => {
 
         if(error) {
             return res.status(400).send({
-                message: "user not created",
+                message: "Account not created",
             })
         }
         
