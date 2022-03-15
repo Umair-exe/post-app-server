@@ -18,7 +18,7 @@ app.use('/uploads',express.static('uploads'));
 app.use('/',require('./routes'));
 app.use('/posts',require('./routes/posts'))
 
-const CONNECTION_URI = "mongodb+srv://umair_21:12345oka@cluster0.qnlgx.mongodb.net/Blog?retryWrites=true&w=majority"
+const CONNECTION_URI = process.env.CONNECTION_URL;
 
 
 mongoose.connect(CONNECTION_URI)
