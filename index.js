@@ -3,7 +3,11 @@ const mongoose =  require('mongoose');
 const fileUpload = require('express-fileupload')
 const dotenv = require('dotenv')
 const app = express();
-const cors = require('cors');
+app.use(cors({
+    origin: ["http://localhost:19002"],
+    optionsSuccessStatus: 200
+
+}));
 
 dotenv.config({path: './confing/.env'});
 
