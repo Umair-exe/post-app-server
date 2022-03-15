@@ -15,8 +15,8 @@ const PORT = process.env.PORT || 5000;
 
 app.use('/uploads',express.static('uploads'));
 
-app.use('/',require('./routes'));
-app.use('/posts',require('./routes/posts'))
+app.use('/api/',require('./routes'));
+app.use('/api/posts',require('./routes/posts'))
 
 const CONNECTION_URI = process.env.CONNECTION_URL;
 
